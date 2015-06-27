@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<html> <head>
+<meta http-equiv="refresh" content="10">
+
+</head>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+
+$.getJSON( "https://data.sparkfun.com/output/RMbp8YVRQ2flJ7bo4z8w.json", function( data ) {
+  var items = [];
+  $.each( data, function( key, val ) {
+    items.push( "<li id='" + key + "'>" + val.temp + "</li>" );
+  });
+ 
+  $( "<ul/>", {
+    "class": "my-new-list",
+    html: items.join( "" )
+  }).appendTo( "body" );
+    });
+    
+</script>
+<body>
+<h1>Data</h1>
+
+
+
+
+
+
+</body> </html>
